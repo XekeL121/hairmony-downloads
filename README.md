@@ -8,7 +8,7 @@ El piloto necesita Windows x64, internet y una cuenta de Hairmony. Todavía no e
 
 [Descargar el último instalador para Windows](https://github.com/XekeL121/hairmony-downloads/releases/latest/download/Hairmony-Setup.exe)
 
-El enlace conserva el mismo nombre y apunta al último instalador publicado. Cada versión conserva su descarga propia en Releases, junto con SHA256SUMS.txt y release-manifest.json. Antes de la primera release, el enlace todavía no estará disponible.
+El enlace conserva el mismo nombre y apunta al último instalador publicado. Cada versión conserva su descarga propia en Releases, junto con SHA256SUMS.txt y release-manifest.json.
 
 ## Actualizar conservando datos
 
