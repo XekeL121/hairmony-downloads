@@ -1,19 +1,27 @@
 # Hairmony — descargas
 
-Canal de instaladores de Hairmony, una aplicación de ArmonyFlow. El código del CRM permanece privado; este repositorio publica instaladores, comprobaciones de integridad y notas de versión.
+Instaladores de Hairmony, una aplicación de ArmonyFlow. El código del CRM permanece privado; este repositorio publica instaladores, comprobaciones de integridad y notas de versión.
 
-## Piloto para Windows
+## Windows 0.1.6
 
-El piloto necesita Windows x64, internet y una cuenta de Hairmony. Todavía no es la v1 definitiva ni permite trabajar sin conexión. El instalador del piloto no tiene firma digital Authenticode; ese requisito continúa pendiente para la distribución v1.
+Requiere Windows x64 y una cuenta de Hairmony. La preparación inicial necesita conexión y autorización desde la web. Cada peluquería puede vincular un PC Windows activo; otros ordenadores, móviles y tablets acceden mediante la web.
 
-[Descargar el último instalador para Windows](https://github.com/XekeL121/hairmony-downloads/releases/latest/download/Hairmony-Setup.exe)
+[Descargar Hairmony para Windows](https://github.com/XekeL121/hairmony-downloads/releases/latest/download/Hairmony-Setup.exe)
 
-El enlace conserva el mismo nombre y apunta al último instalador publicado. Cada versión conserva su descarga propia en Releases, junto con SHA256SUMS.txt y release-manifest.json.
+El instalador permite elegir la carpeta del programa. La preparación de la copia local elige por separado la carpeta de datos cifrados `HairmonyData/<peluquería>/<usuario>/`. La sesión y las claves protegidas por Windows permanecen en `%APPDATA%/ArmonyFlow/Hairmony`. Copiar los archivos no autoriza otro PC.
+
+La copia local permite las operaciones de negocio admitidas sin conexión y sincroniza al volver a conectarse. Los conflictos requieren revisión. Los formularios sin guardar y las sesiones son propios de cada dispositivo.
 
 ## Actualizar conservando datos
 
-Guarda el trabajo y cierra Hairmony antes de ejecutar el instalador nuevo. Usa la misma cuenta de Windows. El programa mantiene el perfil y la sesión fuera del directorio de instalación; los datos de negocio del piloto conectado permanecen en la nube. No hace falta desinstalar primero ni crear otra peluquería.
+Guarda el trabajo, sincroniza los cambios pendientes y cierra Hairmony antes de ejecutar el instalador nuevo. Usa la misma cuenta de Windows. No hace falta desinstalar primero. Conserva el perfil, la carpeta de datos y el material de recuperación; el instalador no los elimina al actualizar o reinstalar.
 
-Las futuras migraciones de una base local necesitan sus propias pruebas y copias de recuperación. La base local y la sincronización todavía no están implementadas en este piloto.
+Antes de cambiar de PC, sincroniza y revoca la vinculación anterior desde la web. Si quedan datos sin sincronizar o el equipo falla, utiliza la recuperación verificada antes de liberar la vinculación.
+
+## Integridad y canal
+
+Cada versión conserva su descarga en Releases junto con `SHA256SUMS.txt` y `release-manifest.json`. El enlace de descarga anterior apunta a la última versión publicada.
+
+Esta entrega mantiene el canal piloto y todavía no dispone de firma Authenticode. La verificación de integridad no sustituye esa firma.
 
 GitHub Actions permanece desactivado. Las compilaciones y comprobaciones se realizan en local. Este repositorio no contiene el código privado del CRM, cuentas, datos de peluquerías, claves ni copias de seguridad.
